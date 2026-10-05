@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="SN64pRL7KPBeS6AFcpavw4hqOXpsQOiIx0HWBcwmg94" />
+  <title>プリンセスキャットマリン Official Website</title>
+  
+  <!-- 丸ゴシック系フォント（Google Fonts）の読み込み -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <meta name="keywords" content="プリンセスキャット, マリン, ベンガル, ねこ, イラスト, ヨツヤ, 教育アニメ, ショートアニメ, プリンセスキャットマリン">
+  <meta name="description" content="幼児向け教育ショートアニメ公開中のプリンセスキャットマリンの公式サイト。毎週日曜日と水曜日に新作動画公開予定🎵">
+  <title>プリンセスキャットマリン公式サイト</title>
+
+  <meta property="og:title" content="プリンセスキャットマリン">
+  <meta property="og:description" content="幼児向け教育ショートアニメ公開中のプリンセスキャットマリンの公式サイト。毎週日曜日と水曜日に新作動画公開予定🎵">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://agu8759094-create.github.io/marin-page/">
+  
+  <!-- CSSの読み込み -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+
+  <!-- ==========================================
+    1. ロード画面（GIF animation & Progress bar）
+  =========================================== -->
+  <div id="loading" class="loading-overlay">
+    <div class="loading-content">
+      <img src="images/walk.GIF" alt="ロード中..." class="loading-gif">
+      <div class="loading-bar-container">
+        <div class="loading-bar" id="loading-bar"></div>
+      </div>
+      <p class="loading-text">ロード中... </p>
+    </div>
+  </div>
+
+  <!-- ==========================================
+    2. ヘッダー（サンリオ風デザイン）
+  =========================================== -->
+  <header class="site-header">
+    <meta name="google-site-verification" content="SN64pRL7KPBeS6AFcpavw4hqOXpsQOiIx0HWBcwmg94" />
+    <div class="header-inner">
+      <!-- ロゴ & アイコン -->
+      <a href="#" class="site-logo">
+        <img src="images/aikon.png" alt="まりん アイコン" class="logo-icon">
+        <span class="logo-text">マリン</span>
+      </a>
+
+      <!-- PC用ナビゲーション -->
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="#home" class="nav-link">ホーム</a></li>
+          <li><a href="#gallery" class="nav-link">ギャラリー</a></li>
+          <li><a href="#about" class="nav-link">マリンについて</a></li>
+          <li><a href="#anime" class="nav-link">アニメ</a></li>
+          <li><a href="#projects" class="nav-link">その他プロジェクト</a></li>
+          <li><a href="#sns" class="nav-link">SNS</a></li>
+        </ul>
+      </nav>
+
+      <!-- スマホ用ハンバーガーボタン -->
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="メニューを開く">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+
+    <!-- スマホ用スライドメニュー（バツボタン付き） -->
+    <div class="mobile-menu" id="mobile-menu">
+      <button class="close-btn" id="close-btn" aria-label="メニューを閉じる">×</button>
+      <nav class="mobile-nav">
+        <ul>
+          <li><a href="#home" class="mobile-nav-link">ホーム</a></li>
+          <li><a href="#gallery" class="mobile-nav-link">ギャラリー</a></li>
+          <li><a href="#about" class="mobile-nav-link">マリンについて</a></li>
+          <li><a href="#anime" class="mobile-nav-link">アニメ</a></li>
+          <li><a href="#projects" class="mobile-nav-link">その他プロジェクト</a></li>
+          <li><a href="#sns" class="nav-link">SNS</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================
+    メインコンテンツ
+  =========================================== -->
+  <main>
+
+    <!-- 3. スライドショーエリア -->
+   <!-- 3. スライドショーエリア（修正後） -->
+   <section id="home" class="hero-section">
+    <div class="slideshow-container">
+      <div class="slide fade">
+        <img src="images/cherry.JPG" alt="スライド画像1">
+      </div>
+      <div class="slide fade">
+        <img src="images/news3.png" alt="スライド画像2">
+      </div>
+      <div class="slide fade">
+        <img src="images/news2.png" alt="スライド画像3">
+      </div>
+      
+      <!-- ★ここに矢印ボタンを追加します -->
+      <!-- 前へボタン -->
+      <a class="prev-btn" id="prev-btn" aria-label="前のスライドへ">&#10094;</a>
+      <!-- 次へボタン -->
+      <a class="next-btn" id="next-btn" aria-label="次のスライドへ">&#10095;</a>
+      
+      <!-- インジケーター（ドット） -->
+      <div class="dots-container">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </section>
+
+    <!-- 4. ニュース欄（背景：cat.background.JPG） -->
+    <section class="news-section">
+      <div class="news-container">
+        <h2 class="section-title">NEWS</h2>
+        <ul class="news-list">
+          <li class="news-item">
+            <span class="news-date">2026/10/02</span>
+            <span class="news-text">サイトがオープンしました</span>
+          </li>
+          <li class="news-item">
+            <span class="news-date">2026/10/1</span>
+            <span class="news-text">ショートアニメ10月4日公開決定</span>
+          </li>
+          <li class="news-item">
+            <span class="news-date">2026/10/2</span>
+            <span class="news-text">10月のカレンダー配布中！各種SNSからダウンロード🎵</span>
+          </li>
+           <li class="news-item">
+            <span class="news-date">2026/10/5</span>
+            <span class="news-text">ショートアニメ「おなじ月を見ているね」公開中！</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    
+
+    <!-- 5. まりんについてセクション -->
+    <section id="about" class="about-section">
+      <div class="about-container">
+        <h2 class="section-title">マリンについて</h2>
+
+        <!-- キャラクター紹介 -->
+        <div class="character-card">
+          <div class="card-header">
+            <h3>マリン</h3>
+          </div>
+          <p class="character-desc">
+            好奇心旺盛なベンガルの女の子。「なんで？」「どうして？」の気持ちを大切にしながら社会を学んでいく。
+          </p>
+        </div>
+
+        <!-- 作者紹介 -->
+        <div class="author-card">
+          <h3 class="author-title">作者について</h3>
+          <p class="author-desc">
+            プリンセスキャットマリンはものづくりが大好きな4人の大学生が、「絵本を通して子供達想像力や可能性を広げたい」という想いから生まれたオリジナルキャラクターです。<br>
+            このプロジェクトのアイディアは高校時代から少しずつ育まれ、たくさんの試行錯誤を重ねながらようやく形になりました。<br>
+            マリンの活躍やさまざまな活動を通して、子どもたちの笑顔や想像力を育むお手伝いができる存在を目指して活動しています。
+          </p>
+        </div>
+      </div>
+    </section>
+
+ <!-- 6. ギャラリーセクション（修正後） -->
+ <section id="gallery" class="gallery-section">
+    <h2 class="section-title">今月の描き下ろしイラスト♩</h2>
+    
+    <div class="gallery-grid">
+      <!-- カード1 -->
+      <div class="gallery-card">
+        <div class="card-tape"></div>
+        <div class="gallery-img-wrapper">
+          <img src="images/gallery1.png" alt="イラスト1">
+        </div>
+        <p class="gallery-caption">読書の秋</p>
+      </div>
+
+      <!-- カード2 -->
+      <div class="gallery-card">
+        <div class="card-tape"></div>
+        <div class="gallery-img-wrapper">
+          <img src="images/gallery2.png" alt="イラスト2">
+        </div>
+        <p class="gallery-caption">ぷかぷかマリン</p>
+      </div>
+
+      <!-- カード3 -->
+      <div class="gallery-card">
+        <div class="card-tape"></div>
+        <div class="gallery-img-wrapper">
+          <img src="images/soda.png" alt="イラスト3">
+        </div>
+        <p class="gallery-caption">クリームソーダ</p>
+      </div>
+
+      <!-- カード4 -->
+      <div class="gallery-card">
+        <div class="card-tape"></div>
+        <div class="gallery-img-wrapper">
+          <img src="images/heart.png" alt="イラスト4">
+        </div>
+        <p class="gallery-caption">ハートマリン</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. あにめセクション（サムネイル方式） -->
+    <section id="anime" class="anime-section">
+      <h2 class="section-title">アニメ</h2>
+      <p class="anime-subtitle">マリンのYouTubeショート動画だよ♪</p>
+      
+      <div class="anime-grid">
+        <!-- 動画カード1 -->
+        <div class="anime-card">
+          <a href="https://www.youtube.com/shorts/jSiYGDf8k3U?si=FYVKe3bi8EEdH7MP" target="_blank" rel="noopener noreferrer" class="anime-link">
+            <div class="anime-frame">
+              <!-- YouTube公式からサムネイル画像を自動取得 -->
+              <img src="https://img.youtube.com/vi/jSiYGDf8k3U/hqdefault.jpg" alt="ショートアニメ第1話">
+              <div class="play-icon">▶</div>
+            </div>
+          </a>
+          <p class="anime-caption">ショートアニメ第1話</p>
+        </div>
+
+        <!-- 動画カード2 -->
+        <div class="anime-card">
+          <a href="https://www.youtube.com/shorts/動画ID2" target="_blank" rel="noopener noreferrer" class="anime-link">
+            <div class="anime-frame">
+              <img src="https://img.youtube.com/vi/動画ID2/hqdefault.jpg" alt="ショートアニメ第2話">
+              <div class="play-icon">▶</div>
+            </div>
+          </a>
+          <p class="anime-caption">10月8日公開予定</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 8. その他プロジェクト（プレースホルダー） -->
+    <section id="projects" class="placeholder-section">
+      <h2 class="section-title">その他プロジェクト</h2>
+      <p class="placeholder-text">いろんなワクワクする企画を準備中♪</p>
+    </section>
+
+  </main>
+
+  <!-- SNSリンクコーナー -->
+  <section id="sns" class="sns-section">
+    <div class="sns-container">
+      <h2 class="section-title">SNS</h2>
+      <p class="sns-subtitle">書き下ろしイラスト公開中！マリンの最新情報をチェックしてね♪</p>
+      
+      <div class="sns-links">
+        <!-- YouTube -->
+        <a href="https://youtube.com/channel/UCMWmJ8ng4rCk-xD9yCbycGA?si=nBrlMhMwT2KFOscv" target="_blank" rel="noopener noreferrer" class="sns-btn youtube" aria-label="YouTube">
+          <span class="sns-icon">▶</span>
+          <span class="sns-label">YouTube</span>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/bengal_marine?stkn=ZWh6czlrN2N4Nmhp&utm_source=qr" target="_blank" rel="noopener noreferrer" class="sns-btn instagram" aria-label="Instagram">
+          <span class="sns-icon">📷</span>
+          <span class="sns-label">Instagram</span>
+        </a>
+
+        <!-- Twitter (X) -->
+        <a href="https://x.com/bengal_marine13?s=11" target="_blank" rel="noopener noreferrer" class="sns-btn twitter" aria-label="Twitter">
+          <span class="sns-icon">🐤</span>
+          <span class="sns-label">Twitter</span>
+        </a>
+
+        <!-- Threads -->
+        <a href="https://threads.net/@YOUR_ACCOUNT" target="_blank" rel="noopener noreferrer" class="sns-btn threads" aria-label="Threads">
+          <span class="sns-icon">＠</span>
+          <span class="sns-label">Threads</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+    フッター
+  =========================================== -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Princess Cat Marine Project.</p>
+  </footer>
+
+</body>
+</html>
+
+<!-- script.js の読み込み（</body> の直前に設置） -->
+<script src="script.js"></script>
+</body>
+</html>
