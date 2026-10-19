@@ -168,3 +168,16 @@ document.addEventListener('DOMContentLoaded', () => {
   startInterval();
   
   });
+
+  /* ==========================================
+     固定キャラウィジェットの閉じる処理
+  =========================================== */
+  const charWidget = document.getElementById('char-widget');
+  const charCloseBtn = document.getElementById('char-close-btn');
+
+  if (charCloseBtn && charWidget) {
+    charCloseBtn.addEventListener('click', () => {
+      // hiddenクラスを付与してふわっと消す
+      charWidget.classList.add('hidden');
+    });
+  }

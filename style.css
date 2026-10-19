@@ -977,3 +977,141 @@ ul, ol {
     margin: 0 auto;
   }
 }
+
+/* ==========================================
+   画面固定キャラクター（usagi.png）ウィジェット
+=========================================== */
+.fixed-char-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1500;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  /* ぷっくりふわふわ揺れるアニメーション */
+  animation: floatChar 3s ease-in-out infinite alternate;
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
+}
+
+/* 非表示用クラス（JSで制御） */
+.fixed-char-widget.hidden {
+  opacity: 0;
+  transform: translateY(20px) scale(0.8);
+  visibility: hidden;
+}
+
+/* 吹き出しスタイル */
+.char-bubble {
+  position: relative;
+  background: #ffffff;
+  border: 3px solid #ff8fa3;
+  border-radius: 20px;
+  padding: 12px 35px 12px 18px; /* 右側にバツボタン用の余白確保 */
+  box-shadow: 0 6px 18px rgba(255, 143, 163, 0.3);
+  margin-bottom: 8px;
+  max-width: 220px;
+}
+
+/* 吹き出しのしっぽ（下の三角） */
+.char-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  right: 40px;
+  border-width: 12px 10px 0 10px;
+  border-style: solid;
+  border-color: #ff8fa3 transparent transparent transparent;
+}
+
+.char-bubble::before {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  right: 42px;
+  border-width: 10px 8px 0 8px;
+  border-style: solid;
+  border-color: #ffffff transparent transparent transparent;
+  z-index: 1;
+}
+
+.char-bubble p {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #ff477e;
+  line-height: 1.4;
+  margin: 0;
+  text-align: center;
+}
+
+/* 吹き出し内のバツボタン（×） */
+.char-close-btn {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  width: 22px;
+  height: 22px;
+  background-color: #fff0f3;
+  border: 2px solid #ffb3c1;
+  border-radius: 50%;
+  color: #ff5c8a;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.char-close-btn:hover {
+  background-color: #ff477e;
+  color: #ffffff;
+  border-color: #ff477e;
+  transform: scale(1.15);
+}
+
+/* キャラクター画像 */
+.char-img-wrapper {
+  width: 230px; /* キャラクターの表示サイズ */
+  height: auto;
+  filter: drop-shadow(0 4px 10px rgba(255, 143, 163, 0.3));
+}
+
+.char-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ふんわり上下に浮遊するアニメーション */
+@keyframes floatChar {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-8px);
+  }
+}
+
+/* スマホ対応（邪魔になりにくいよう少し縮小） */
+@media (max-width: 600px) {
+  .fixed-char-widget {
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  .char-bubble {
+    max-width: 180px;
+    padding: 10px 30px 10px 14px;
+  }
+  
+  .char-bubble p {
+    font-size: 0.78rem;
+  }
+  
+  .char-img-wrapper {
+    width: 200px;
+  }
+}
